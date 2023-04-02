@@ -1,0 +1,11 @@
+{
+    "require": {
+        "php": "^8.2",
+        "aimeos/map": "^3.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "Api\\": "src"
+        }
+    }
+}
