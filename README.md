@@ -8,7 +8,7 @@ Developed and tested on Linux Debian 11 with :
 
 ## Install
 ```bash
-$> git clone ...
+$> git clone git@github.com:tvequaud/test-sprint-technology.git
 $> cd test-sprint-technology
 $> composer install
 ```
