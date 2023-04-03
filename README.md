@@ -14,11 +14,12 @@ $> composer install
 ```
 Now you're good to go !
 
+
 ## Test the app
 
 ### Quick test
  ```bash
- $> php api.php
+ $> php api.php --sort
 Take train 78A from Madrid to Barcelona. Sit in seat 45B.
 Take the airport bus from Barcelona to Gerona Airport. No seat assignment.
 From Gerona Airport, take flight SK455 to Stockholm. Gate 45B, seat 3A. Baggage drop at ticket counter 344.
@@ -26,10 +27,13 @@ From Stockholm, take flight SK22 to New York JFK. Gate 22, seat 7B. Baggage will
 You have arrived at your final destination.
 ```
 
+`--sort` option allows you to sort or not the result displayed.
+
+
 ### Advanced test
-Edit file `api.php` with your favorite editor then modify variable $list ([line 10](https://github.com/tvequaud/test-sprint-technology/blob/master/api.php#L10)) : 
+Edit file `api.php` with your favorite editor then modify variable `$input` ([line 16](https://github.com/tvequaud/test-sprint-technology/blob/master/api.php#L16)) : 
 ```php
-$list = [
+$input = [
     'c' => new Plane('Gerona Airport', 'Stockholm', 'SK455','3A', '45B', '344'),
     'b' => new AirportBus('Barcelona', 'Gerona Airport'),
     'a' => new Train('Madrid', 'Barcelona', '78A', '45B'),
@@ -37,12 +41,13 @@ $list = [
 ];
 ```
 
-#### Sortable
-The test talks about "out of order" boarding cards : I assumed you meant "unordered".
-Usually, input data comes from an API or a database, with an index. So, default data input is a simple PHP array with unsorted boarding cards, then they are automatically ordered by their index with [ksort method](https://github.com/tvequaud/test-sprint-technology/blob/master/api.php#L18).
-
-#### Input data
 You can also change the data displayed.
 
-Several transport types are available : AirportBus, Bus, Plane and Train.
+Several transport types are available : `AirportBus`, `Bus` (as a bonus/example), `Plane` and `Train`.
 Transport classes are defined in directory `src/Api/Transport`. Open them to find out their own properties : number, seat, gate, baggage...
+
+
+## Todo
+- refactor transport class with a factory...
+- add unit tests
+

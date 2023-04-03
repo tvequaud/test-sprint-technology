@@ -8,17 +8,14 @@ class Plane extends TransportAbstract
 
     private ?string $baggage;
 
-    public function __construct(string $from, string $to, string $number = null, string $seat = null, string $gate = null, string $baggage = null)
+
+    public function __construct(string $from, string $to, string $number, string $seat, string $gate = null, string $baggage = null)
     {
         $this->gate = $gate;
         $this->baggage = $baggage;
         parent::__construct('flight', $from, $to, $number, $seat);
     }
 
-    private function getBaggage()
-    {
-
-    }
 
     public function __toString(): string
     {
