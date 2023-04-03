@@ -38,7 +38,8 @@ $list = [
 ```
 
 #### Sorting
-You can change the display order by modifying the index aka 'a', 'b', 'c', 'd'... 
+The test talks about "out of order" boarding cards : I assumed it's a translation mistake and you meant "disordered" cardboards ;)
+Usually, input data comes from an API with an index. So, default data input is a simple PHP array with disordered boarding cards as you asked. Boarding cards are automatically ordered by index within the PHP array. So you can simply change the display order by modifying the index aka 'a', 'b', 'c', 'd'.
 
 #### Input
 You can also change the data displayed.
