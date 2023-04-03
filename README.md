@@ -27,7 +27,7 @@ You have arrived at your final destination.
 ```
 
 ### Advanced test
-Edit file `api.php` with your favorite editor then modify variable $list (line 10) : 
+Edit file `api.php` with your favorite editor then modify variable $list ([line 10](https://github.com/tvequaud/test-sprint-technology/blob/master/api.php#L10)) : 
 ```php
 $list = [
     'c' => new Plane('Gerona Airport', 'Stockholm', 'SK455','3A', '45B', '344'),
@@ -37,11 +37,11 @@ $list = [
 ];
 ```
 
-#### Sorting
-The test talks about "out of order" boarding cards : I assumed it's a translation mistake and you meant "disordered" cardboards ;)
-Usually, input data comes from an API with an index. So, default data input is a simple PHP array with disordered boarding cards as you asked. Boarding cards are automatically ordered by index within the PHP array. So you can simply change the display order by modifying the index aka 'a', 'b', 'c', 'd'.
+#### Sortable
+The test talks about "out of order" boarding cards : I assumed you meant "unordered".
+Usually, input data comes from an API or a database, with an index. So, default data input is a simple PHP array with unsorted boarding cards, then they are automatically ordered by their index with [ksort method](https://github.com/tvequaud/test-sprint-technology/blob/master/api.php#L18).
 
-#### Input
+#### Input data
 You can also change the data displayed.
 
 Several transport types are available : AirportBus, Bus, Plane and Train.
