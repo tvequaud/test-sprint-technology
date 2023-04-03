@@ -48,6 +48,8 @@ Transport classes are defined in directory `src/Api/Transport`. Open them to fin
 
 
 ## Todo
-- refactor transport class with a factory...
-- add unit tests
-
+- Load data input from JSON file
+- Check and clean data input
+- Instantiate transport class with a factory
+- Manager exceptions
+- Add unit tests
